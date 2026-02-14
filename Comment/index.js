@@ -11,5 +11,6 @@ const btn = document.getElementById('comment-id').addEventListener('click', ()=>
     
     document.getElementById('comment-box').appendChild(newComment);
 
+    comment.value = '';
     
 })
