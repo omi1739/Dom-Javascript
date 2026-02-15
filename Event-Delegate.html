@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegate</title>
+</head>
+<body>
+    
+    <h1>Hello OMIBOSS.</h1>
+
+    
+        <ol id="item-list">
+            <li class="item">My Item list 1</li>
+            <li class="item">My Item list 2</li>
+            <li class="item">My Item list 3</li>
+            <li class="item">My Item list 4</li>
+            <li class="item">My Item list 5</li>
+            <li class="item">My Item list 6</li>
+        </ol>
+
+        <button id="add-button">Add Item</button>
+    
+
+        <script>
+            document.getElementById('item-list').addEventListener('click',(e)=>{
+                    e.target.parentNode.removeChild(e.target) ;
+
+                  
+            })
+
+              document.getElementById('add-button').addEventListener('click', ()=>{
+                 const ol = document.getElementById('item-list');
+
+                 const li = document.createElement('li');
+                 li.innerText = 'New Item Added';
+                 console.log(li);
+                 
+                 ol.appendChild(li);
+
+              })
+
+        </script>
+</body>
+</html>

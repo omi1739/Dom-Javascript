@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+</head>
+<body>
+
+    <h1>Hello OMIBOSS</h1>
+
+    <input id="input-text" type="text" placeholder="Write 'Delete'">
+    <button id="delete-btn" disabled>Delete</button>
+
+    <script>
+
+        document.getElementById('input-text').addEventListener('keyup', (event)=>{
+            
+           const text = event.target.value;
+            console.log(text);
+            
+
+            const deleteButton =  document.getElementById('delete-btn');
+
+            if(text === 'Delete'){
+               deleteButton.removeAttribute('disabled');
+            }
+            else{
+                deleteButton.setAttribute('disabled', true);
+            }
+        })
+
+        document.getElementById('delete-btn').addEventListener('click', ()=>{
+            document.getElementById('input-text').value =''; 
+        })
+
+    </script>
+</body>
+</html>
