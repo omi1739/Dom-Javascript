@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Theme</title>
+
+    <style>
+        body {
+            background-color: #fff;
+            color: black;
+        }
+
+        .darkMode {
+            background-color: black;
+            color: azure;
+
+        }
+    </style>
+</head>
+
+<body id="main-body">
+
+    <h1>Hello OMIBOSS.</h1>
+    <p>I hope that you will be able to make the dark theme.</p>
+
+    <button id="dark-button">Darkmode</button>
+
+
+    <script>
+
+        const button = document.getElementById('dark-button');
+        const body = document.getElementById('main-body');
+
+        
+        button.addEventListener('click', () => {
+
+            body.classList.toggle('darkMode');
+
+            if (body.classList.contains('darkMode')) {
+              
+                button.innerText = 'Normal';
+            } else {
+                
+                button.innerText = 'Darkmode ';
+            }
+
+        })
+
+
+    </script>
+
+</body>
+
+</html>
